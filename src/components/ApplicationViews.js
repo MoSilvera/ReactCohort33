@@ -7,6 +7,7 @@ import LocationCard from './location/LocationCard'
 import EmployeeCard from './employee/EmployeeCard'
 import OwnerCard from './owner/OwnerCard'
 import AnimalList from './animal/AnimalList'
+import EmployeeList from './employee/EmployeeList'
 
 
 class ApplicationViews extends Component {
@@ -24,7 +25,7 @@ class ApplicationViews extends Component {
           return <LocationCard />
         }} />
         <Route path="/employees" render={(props) => {
-          return <EmployeeCard />
+          return <EmployeeList />
         }} />
         <Route path="/owners" render={(props) => {
           return <OwnerCard />

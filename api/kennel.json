@@ -5,9 +5,9 @@
         { "id": 3, "name": "Esme", "breed": "Pitbull" }
     ],
     "employees": [
-        {"id": 1, "name": "Madi", "catchprase": "Wait..what?"},
-        {"id": 2, "name": "Mo", "catchprase": "Nope"},
-        {"id": 3, "name": "Joe", "catchprase": "But why?"}
+        {"id": 1, "name": "Madi", "catchphrase": "Wait..what?"},
+        {"id": 2, "name": "Mo", "catchphrase": "Nope"},
+        {"id": 3, "name": "Joe", "catchphrase": "But why?"}
     ],
     "locations":[
         {"id": 1, "name": "Fluffy Acres", "address": "123 rainbow bridge way"},
