@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
-import './Kennel.css'
+import React, { Component } from "react"
+import NavBar from "./nav/NavBar"
+import ApplicationViews from "./ApplicationViews"
+
+import "./Kennel.css"
 
 class Kennel extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Student Kennels<br />
-                    <small>Loving care when you're not there.</small>
-                </h2>
-                <address>
-                    Visit Us at the Nashville North Location
-                    <br />500 Puppy Way
-                </address>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <NavBar />
+        <ApplicationViews />
+      </React.Fragment>
+    )
+  }
 }
 
 export default Kennel
