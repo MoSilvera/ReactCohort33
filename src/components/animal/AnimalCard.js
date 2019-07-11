@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import "./Animal.css"
+import {Button, Card, CardTitle} from 'reactstrap'
 
 class AnimalCard extends Component {
   render() {
     return (
-      <div className="card">
+      <Card className="card">
           <div className="card-content">
             <picture>
               <img src={require('./DogIcon.svg')} alt="My Dog" />
@@ -16,8 +17,9 @@ class AnimalCard extends Component {
                 .map(employee => employee.name )
 
             }</p>
+            <Button onClick={() => {this.props.deleteAnimal(this.props.animal.id)}}>Discharge</Button>
           </div>
-      </div>
+      </Card>
     );
   }
 }

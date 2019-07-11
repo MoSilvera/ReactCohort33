@@ -1,17 +1,50 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle", "employeeId":1},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd","employeeId":2 },
-        { "id": 3, "name": "Esme", "breed": "Pitbull", "employeeId":3}
-    ],
-    "employees": [
-        {"id": 1, "name": "Madi", "catchphrase": "Wait..what?"},
-        {"id": 2, "name": "Mo", "catchphrase": "Nope"},
-        {"id": 3, "name": "Joe", "catchphrase": "But why?"}
-    ],
-    "locations":[
-        {"id": 1, "name": "Fluffy Acres", "address": "123 rainbow bridge way"},
-        {"id": 2, "name": "Waggin Place", "address": "227 puppeh road"},
-        {"id": 3, "name": "Howl Town", "address": "412 doggo place"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "employeeId": 1
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "employeeId": 3
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Madi",
+      "catchphrase": "Wait..what?"
+    },
+    {
+      "id": 2,
+      "name": "Mo",
+      "catchphrase": "Nope"
+    },
+    {
+      "id": 3,
+      "name": "Joe",
+      "catchphrase": "But why?"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Fluffy Acres",
+      "address": "123 rainbow bridge way"
+    },
+    {
+      "id": 2,
+      "name": "Waggin Place",
+      "address": "227 puppeh road"
+    },
+    {
+      "id": 3,
+      "name": "Howl Town",
+      "address": "412 doggo place"
+    }
+  ]
 }

@@ -9,6 +9,17 @@ class AnimalList extends Component {
         animals: [],
         employees: []
     }
+    deleteAnimal = id => {
+        AnimalManager.delete(id)
+        .then(() => {
+          AnimalManager.getAll()
+          .then((newAnimals) => {
+            this.setState({
+                animals: newAnimals
+            })
+          })
+        })
+      }
 
 componentDidMount(){
     const newState = {}
@@ -30,7 +41,10 @@ render(){
     return(
       <div className="cards">
         {this.state.animals.map(animal =>
-          <AnimalCard key={animal.id} animal={animal} employees={this.state.employees}/>
+          <AnimalCard 
+            key={animal.id} animal={animal} 
+            employees={this.state.employees}
+            deleteAnimal ={this.deleteAnimal}/>
         )}
       </div>
     )
