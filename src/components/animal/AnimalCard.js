@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Animal.css"
 
 class AnimalCard extends Component {
   render() {
@@ -10,6 +11,11 @@ class AnimalCard extends Component {
             </picture>
             <h2>Name: <span style={{color: 'darkslategrey'}}>{this.props.animal.name}</span></h2>
             <p>Breed: {this.props.animal.breed}</p>
+            <p>Caretaker: {this.props.employees.filter(
+                employee => employee.id === this.props.animal.employeeId)
+                .map(employee => employee.name )
+
+            }</p>
           </div>
       </div>
     );

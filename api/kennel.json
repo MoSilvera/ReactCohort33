@@ -1,8 +1,8 @@
 {
     "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Sheperd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+        { "id": 1, "name": "Doodles", "breed": "Poodle", "employeeId":1},
+        { "id": 2, "name": "Decker", "breed": "German Sheperd","employeeId":2 },
+        { "id": 3, "name": "Esme", "breed": "Pitbull", "employeeId":3}
     ],
     "employees": [
         {"id": 1, "name": "Madi", "catchphrase": "Wait..what?"},

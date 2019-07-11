@@ -2,22 +2,26 @@ import React, { Component } from 'react'
 //import the components we will need
 import AnimalCard from './AnimalCard'
 import AnimalManager from '../../modules/AnimalManager'
-
+import EmployeeManager from '../../modules/EmployeeManager'
 class AnimalList extends Component {
     //define what this component needs to render
     state = {
         animals: [],
+        employees: []
     }
 
 componentDidMount(){
-    console.log("ANIMAL LIST: ComponentDidMount");
-    //getAll from AnimalManager and hang on to that data; put it in state
+    const newState = {}
     AnimalManager.getAll()
-    .then((animals) => {
-        this.setState({
-            animals: animals
-        })
+    .then((animals) => { console.log(animals)
+        newState.animals = animals
     })
+    .then (EmployeeManager.getAll()
+        .then((employees) =>  {
+            newState.employees = employees
+            console.log(newState)
+        }).then (() => {this.setState(newState)})
+        )
 }
 
 render(){
@@ -26,7 +30,7 @@ render(){
     return(
       <div className="cards">
         {this.state.animals.map(animal =>
-          <AnimalCard key={animal.id} animal={animal} />
+          <AnimalCard key={animal.id} animal={animal} employees={this.state.employees}/>
         )}
       </div>
     )
