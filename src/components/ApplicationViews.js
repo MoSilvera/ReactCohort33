@@ -8,6 +8,7 @@ import EmployeeCard from './employee/EmployeeCard'
 import OwnerCard from './owner/OwnerCard'
 import AnimalList from './animal/AnimalList'
 import EmployeeList from './employee/EmployeeList'
+import LocationList from './location/LocationList'
 
 
 class ApplicationViews extends Component {
@@ -21,14 +22,14 @@ class ApplicationViews extends Component {
         <Route path="/animals" render={(props) => {
           return <AnimalList />
         }} />
-        <Route path="/locations" render={(props) => {
-          return <LocationCard />
-        }} />
         <Route path="/employees" render={(props) => {
           return <EmployeeList />
         }} />
         <Route path="/owners" render={(props) => {
           return <OwnerCard />
+        }} />
+        <Route path ="/locations" render={(props) =>{
+          return <LocationList />
         }} />
       </React.Fragment>
     )
