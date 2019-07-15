@@ -46,5 +46,17 @@
       "name": "Howl Town",
       "address": "412 doggo place"
     }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Steve Brownlee",
+      "address": "4472 BridgeTroll Way"
+    },
+    {
+      "id": 2,
+      "name": "Joe Shepherd",
+      "address": "4472 Dubious Avenue"
+    }
   ]
 }
