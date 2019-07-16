@@ -28,12 +28,10 @@ componentDidMount(){
         this.setState({
             locations: locations
         })
-        console.log(this.state)
     })
 }
 
 render(){
-  console.log(this.state.locations)
     return(
       <div className="cards">
         {this.state.locations.map(location =>

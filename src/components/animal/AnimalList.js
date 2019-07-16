@@ -41,8 +41,8 @@ render(){
     return(
       <div className="cards">
         {this.state.animals.map(animal =>
-          <AnimalCard 
-            key={animal.id} animal={animal} 
+          <AnimalCard
+            key={animal.id} animal={animal}
             employees={this.state.employees}
             deleteAnimal ={this.deleteAnimal}/>
         )}
