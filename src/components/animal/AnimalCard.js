@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Animal.css"
 import {Button, Card, CardTitle} from 'reactstrap'
 import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.css';
 
 class AnimalCard extends Component {
   render() {
@@ -20,6 +21,15 @@ class AnimalCard extends Component {
             }</p>
             <Button onClick={() => {this.props.deleteAnimal(this.props.animal.id)}}>Discharge</Button>
             <Link className="nav-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
+            <button
+                  type="button"
+                  className="btn btn-success"
+                  onClick={() => {
+                    this.props.history.push(`/animals/${this.props.animal.id}/edit`);
+                  }}
+                >
+                  Edit
+            </button>
           </div>
       </Card>
     );

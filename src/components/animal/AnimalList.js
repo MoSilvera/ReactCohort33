@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import AnimalCard from './AnimalCard'
 import AnimalManager from '../../modules/AnimalManager'
 import EmployeeManager from '../../modules/EmployeeManager'
+import { withRouter } from 'react-router'
+import 'bootstrap/dist/css/bootstrap.css';
 class AnimalList extends Component {
     //define what this component needs to render
     state = {
@@ -24,31 +26,41 @@ class AnimalList extends Component {
 componentDidMount(){
     const newState = {}
     AnimalManager.getAll()
-    .then((animals) => { console.log(animals)
+    .then((animals) => {
         newState.animals = animals
     })
     .then (EmployeeManager.getAll()
         .then((employees) =>  {
             newState.employees = employees
-            console.log(newState)
         }).then (() => {this.setState(newState)})
         )
 }
 
 render(){
-    console.log("AnimalList: Render");
 
     return(
+      <React.Fragment>
+        <div className="animalButton">
+                    <button type="button"
+                            className="btn btn-success"
+                            onClick={() => {
+                                this.props.history.push("/animals/new")}
+                            }>
+                        Admit Animal
+                    </button>
+                </div>
       <div className="cards">
         {this.state.animals.map(animal =>
           <AnimalCard
             key={animal.id} animal={animal}
             employees={this.state.employees}
-            deleteAnimal ={this.deleteAnimal}/>
+            deleteAnimal ={this.deleteAnimal}
+            {...this.props}/>
         )}
       </div>
+      </React.Fragment>
     )
   }
 }
 
-export default AnimalList
+export default withRouter(AnimalList)

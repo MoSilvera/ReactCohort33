@@ -12,5 +12,24 @@ export default {
         method: "DELETE"
     })
     .then(e => e.json())
+  },
+  post(newAnimal) {
+    return fetch(`${remoteURL}/animals`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newAnimal)
+    }).then(data => data.json())
+  },
+  put(editedAnimal) {
+    return fetch(`${remoteURL}/animals/${editedAnimal.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedAnimal)
+    }).then(data => data.json());
   }
+
 }
